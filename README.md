@@ -15,4 +15,4 @@
 - Python
 
 ### Developers:
-- Sahil Aggarwal[GitHub](https://github.com/sahilee26
+- Sahil Aggarwal[GitHub](https://github.com/sahilee26)
