@@ -16,7 +16,7 @@ These were the input images used (museum and painting):
 
 Here's what I did-
 
-We define a cost function that tells how good is particular image. The cost function includes contest cost that tells how similar contents of generated iamge is with respect to the content image and also includes contest cost that tells how similar style of generated iamge is with respect to the style image.
+We define a cost function that tells how good is particular generated image. The cost function includes contest cost that tells how similar contents of generated iamge is with respect to the content image and also includes contest cost that tells how similar style of generated iamge is with respect to the style image.
 We also define two hyper parameters alpha and beta that define relative weighting between two costs.
 
 ### Algorithm
