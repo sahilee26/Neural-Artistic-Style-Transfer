@@ -12,15 +12,17 @@ These were the input images used (me sleeping at a hackathon and Starry Night):
 ![input-style](monet.jpg)
 
 
-### :Recipe
+### Recipe:
 
-Here's what I did:
+Here's what I did-
 
 
 We define a cost function that tells how good is particular image. The cost function includes contest cost that tells how similar contents of generated iamge is with respect to the content image and also includes contest cost that tells how similar style of generated iamge is with respect to the style image.
 
 We also define two hyper parameters alpha and beta that define relative weighting between two costs.
 
+
+### Algorithm
 -Create an Interactive Session
 -Load the content image
 -Load the style image
