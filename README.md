@@ -3,10 +3,9 @@
 ### Problem Definition:
 - Given two images, content image and style image, the task is to produce a new stylized image using deep learning
 
-##### Output Image
 ![output](output/100.png)
 
-These were the input images used:
+These were the input images used (me sleeping at a hackathon and Starry Night):
 
 ![input-content](louvre_small.jpg)
 
@@ -16,6 +15,9 @@ These were the input images used:
 ### :Recipe
 
 Here's what I did:
+
+
+We define a cost function that tells how good is particular image. The cost function includes contest cost that tells how similar contents of generated iamge is with respect to the content image and also includes contest cost that tells how similar style of generated iamge is with respect to the style image.
 
 -Create an Interactive Session
 -Load the content image
