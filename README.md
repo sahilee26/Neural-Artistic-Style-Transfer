@@ -36,6 +36,7 @@ More Formally
 Given an image we computes something called a style matrix, which will measure all those correlations. Let's let a superscript l, subscript i, j, k denote the activation at position i,j,k in hidden layer l. So i indexes into the height, j indexes into the width, and k indexes across the different channels. 
 
 So what the style matrix will do is we're going to compute a matrix G[l]. This is going to be an nc by nc dimensional matrix, so it'd be a square matrix. We have nc channels and so you have an nc by nc dimensional matrix in order to measure how correlated each pair of them is. So particular G, l, k, k prime will measure how correlated are the activations in channel k compared to the activations in channel k prime.
+![output](Style Matrix.png)
 
 ### Solving the optimization problem
 Create an Interactive Session. Load the content image and the style image. Randomly initialize the image to be generated.Load the VGG19 model. Build the TensorFlow graph. Run the content image through the VGG19 model and compute the content cost. Run the style image through the VGG19 model and compute the style cost. Compute the total cost. Define the optimizer(adam in our case) and the learning rate. Initialize the TensorFlow graph and run it for a large number of iterations, updating the generated image at every step.
