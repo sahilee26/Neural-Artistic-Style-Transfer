@@ -7,7 +7,7 @@
 
 These were the input images used (me sleeping at a hackathon and Starry Night):
 
-![input-content](louvre_smal.jpg)
+![input-content](louvre_small.jpg)
 
 ![input-style](monet.jpg)
 
