@@ -3,6 +3,14 @@
 ### Problem Definition:
 - Given two images, content image and style image, the task is to produce a new stylized image using deep learning
 
+![output](output/100.png)
+
+These were the input images used (me sleeping at a hackathon and Starry Night):
+
+![input-content](louvre_smal.jpg)
+
+![input-style](monet.jpg)
+
 
 ### :Recipe
 
