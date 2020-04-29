@@ -35,8 +35,7 @@ https://www.coursera.org/learn/convolutional-neural-networks/lecture/AzcCW/style
 #### Intuition
 So the correlation tells yus which of these high level texture components tend to occur or not occur together in part of an image and that's the degree of correlation that gives you one way of measuring how often these different high level features, such as vertical texture or this orange tint or other things as well, how often they occur and how often they occur together and don't occur together in different parts of an image.
 
-More Formally 
-Given an image we computes something called a style matrix, which will measure all those correlations. Let's let a superscript l, subscript i, j, k denote the activation at position i,j,k in hidden layer l. So i indexes into the height, j indexes into the width, and k indexes across the different channels. 
+More formally, given an image we computes something called a style matrix, which will measure all those correlations. Let's let a superscript l, subscript i, j, k denote the activation at position i,j,k in hidden layer l. So i indexes into the height, j indexes into the width, and k indexes across the different channels. 
 
 So what the style matrix will do is we're going to compute a matrix G[l]. This is going to be an nc by nc dimensional matrix, so it'd be a square matrix. We have nc channels and so you have an nc by nc dimensional matrix in order to measure how correlated each pair of them is. So particular G, l, k, k prime will measure how correlated are the activations in channel k compared to the activations in channel k prime.
 
