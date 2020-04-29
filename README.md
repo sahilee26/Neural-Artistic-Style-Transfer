@@ -24,7 +24,7 @@ First we intialise generated image randomly. Use graident descent to minimize J(
 
 ### Content Cost
 
-We use pretrained VGG-19 network(19 layers) and specifically middle layers to measure how similar content and generatd image is. 
+We use pretrained VGG-19 network(19 layers) and specifically middle layers to measure how similar content and generated image is. 
 Let's say if I took hidden layer L and A[c][l] and A[g][l] be activations of these layers on two images.So, if these two activations are similar, then that would seem to imply that both images have similar content.We'll take the element-wise difference between these hidden unit activations in layer l, between when you pass in the content image compared to when you pass in the generated image, and take that squared.
 
 ### Style Cost
