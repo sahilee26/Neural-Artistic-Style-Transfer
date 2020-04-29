@@ -28,8 +28,11 @@ We use pretrained VGG-19 network(19 layers) and specifically middle layers to me
 Let's say if I took hidden layer L and A[c][l] and A[g][l] be activations of these layers on two images.So, if these two activations are similar, then that would seem to imply that both images have similar content.We'll take the element-wise difference between these hidden unit activations in layer l, between when you pass in the content image compared to when you pass in the generated image, and take that squared.
 
 ### Style Cost
-We need to do is define the style as the correlation between activations across different channels in this layer L activation. So here's what I mean by that. Let's say you take that layer L activation. So this is going to be nh by nw by nc block of activations, and we're going to ask how correlated are the activations across different channels.How this correlation corresponds to style Refer this video-
+We need to do is define the style as the correlation between activations across different channels in this layer L activation. So here's what I mean by that. Let's say you take that layer L activation. So this is going to be nh by nw by nc block of activations, and we're going to ask how correlated are the activations across different channels.How this correlation corresponds to style.
+Refer this video-
 https://www.coursera.org/learn/convolutional-neural-networks/lecture/AzcCW/style-cost-function. 
+
+#### Intuition
 So the correlation tells yus which of these high level texture components tend to occur or not occur together in part of an image and that's the degree of correlation that gives you one way of measuring how often these different high level features, such as vertical texture or this orange tint or other things as well, how often they occur and how often they occur together and don't occur together in different parts of an image.
 
 More Formally 
