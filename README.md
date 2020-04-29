@@ -5,7 +5,7 @@
 
 ![output](output/100.png)
 
-These were the input images used (me sleeping at a hackathon and Starry Night):
+These were the input images used (museum and painting):
 
 ![input-content](louvre_small.jpg)
 
@@ -28,18 +28,12 @@ We use pretrained VGG-19 network(19 layers) and specifically middle layers to me
 Let's say if I took hidden layer L and A[c][l] and A[g][l] be activations of these layers on two images.So, if these two activations are similar, then that would seem to imply that both images have similar content.We'll take the element-wise difference between these hidden unit activations in layer l, between when you pass in the content image compared to when you pass in the generated image, and take that squared.
 
 ### Style Cost
+We need to do is define the style as the correlation between activations across different channels in this layer L activation. So here's what I mean by that. Let's say you take that layer L activation. So this is going to be nh by nw by nc block of activations, and we're going to ask how correlated are the activations across different channels.How this correlation corresponds to style Refer this video-
+https://www.coursera.org/learn/convolutional-neural-networks/lecture/AzcCW/style-cost-function
+So the correlation tells you which of these high level texture components tend to occur or not occur together in part of an image and that's the degree of correlation that gives you one way of measuring how often these different high level features, such as vertical texture or this orange tint or other things as well, how often they occur and how often they occur together and don't occur together in different parts of an image.
 
--Create an Interactive Session
--Load the content image
--Load the style image
--Randomly initialize the image to be generated
--Load the VGG19 model
--Build the TensorFlow graph:
--Run the content image through the VGG19 model and compute the content cost
--Run the style image through the VGG19 model and compute the style cost
--Compute the total cost
--Define the optimizer and the learning rate
--Initialize the TensorFlow graph and run it for a large number of iterations, updating the generated image at every step.
+### Solving the optimization problem
+Create an Interactive Session. Load the content image and the style image. Randomly initialize the image to be generated.Load the VGG19 model. Build the TensorFlow graph. Run the content image through the VGG19 model and compute the content cost. Run the style image through the VGG19 model and compute the style cost. Compute the total cost. Define the optimizer(adam in our case) and the learning rate. Initialize the TensorFlow graph and run it for a large number of iterations, updating the generated image at every step.
 
 ### Developers:
 - Sahil Aggarwal [GitHub](https://github.com/sahilee26)
