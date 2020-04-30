@@ -44,5 +44,9 @@ So what the style matrix will do is we're going to compute a matrix G[l]. This i
 ### Solving the optimization problem
 Create an Interactive Session. Load the content image and the style image. Randomly initialize the image to be generated.Load the VGG19 model. Build the TensorFlow graph. Run the content image through the VGG19 model and compute the content cost. Run the style image through the VGG19 model and compute the style cost. Compute the total cost. Define the optimizer(adam in our case) and the learning rate. Initialize the TensorFlow graph and run it for a large number of iterations, updating the generated image at every step.
 
+### Adam optimizer
+
+I also learnt about Adam optimization that takes exponentially weighted averages of gradient instead of gradient and takes instead  squared of bias in exp wighted averages and then taking bias correction also in account.
+
 ### Developers:
 - Sahil Aggarwal [GitHub](https://github.com/sahilee26)
