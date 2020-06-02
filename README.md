@@ -29,7 +29,7 @@ Let's say if I took hidden layer L and A[c][l] and A[g][l] be activations of the
 ### Style Cost
 We need to do is define the style as the correlation between activations across different channels in this layer L activation. So here's what I mean by that. Let's say you take that layer L activation. So this is going to be nh by nw by nc block of activations, and we're going to ask how correlated are the activations across different channels.How this correlation corresponds to style.
 
-#### Intuition
+### Intuition
 So the correlation tells us which of these high level texture components tend to occur or not occur together in part of an image and that's the degree of correlation that gives you one way of measuring how often these different high level features, such as vertical texture or this orange tint or other things as well, how often they occur and how often they occur together and don't occur together in different parts of an image.
 
 More formally, given an image we computes something called a style matrix, which will measure all those correlations. Let's let a superscript l, subscript i, j, k denote the activation at position i,j,k in hidden layer l. So i indexes into the height, j indexes into the width, and k indexes across the different channels. 
