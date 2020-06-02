@@ -20,8 +20,7 @@ We define a cost function that tells how good is particular generated image. The
 We also define two hyper parameters alpha and beta that define relative weighting between two costs.
 
 ### Algorithm
-First we intialise generated image randomly. Use graident descent to minimize J(G).
-
+First we intialise generated image randomly. Use graident descent to minimize J(G). Helper functions are given in nst_utils.py
 ### Content Cost
 
 We use pretrained VGG-19 network(19 layers) and specifically middle layers to measure how similar content and generated image is. 
